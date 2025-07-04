@@ -1,27 +1,43 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { authApi } from './api';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setSuccess('');
     if (!email || !password) {
       setError('Please fill in all fields.');
       return;
     }
     setLoading(true);
     try {
-      const res = await authApi.login({ email, password });
-      // Handle login success (e.g., redirect, set auth context)
-      if (res.error) setError(res.error);
-    } catch (err) {
-      setError('Login failed.');
+      const response = await fetch("http://localhost:5000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ username: email, email, password }),
+      });
+      const data = await response.json();
+      if (response.ok && data.access_token) {
+        localStorage.setItem("token", data.access_token);
+        setSuccess("Login successful! Redirecting to your profile...");
+        setError('');
+        setTimeout(() => {
+          navigate('/profile');
+        }, 1500); // 1.5 seconds delay
+      } else {
+        setError(data.msg || "Login failed");
+      }
+    } catch {
+      setError("Login failed.");
     } finally {
       setLoading(false);
     }
@@ -53,6 +69,7 @@ const Login: React.FC = () => {
             />
           </div>
           {error && <div className="text-red-500 text-sm">{error}</div>}
+          {success && <div className="text-green-500 text-sm">{success}</div>}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"

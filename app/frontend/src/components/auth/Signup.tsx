@@ -1,37 +1,44 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { authApi } from './api';
 
 const Signup: React.FC = () => {
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
-    if (!name || !email || !password || !confirmPassword) {
-      setError('Please fill in all fields.');
-      return;
-    }
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters.');
-      return;
-    }
-    if (password !== confirmPassword) {
-      setError('Passwords do not match.');
-      return;
-    }
     setLoading(true);
+    setError(null);
+    setSuccess(null);
+
     try {
-      const res = await authApi.signup({ name, email, password });
-      // Handle signup success (e.g., redirect, set auth context)
-      if (res.error) setError(res.error);
+      const response = await fetch("http://localhost:5000/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSuccess("Signup successful! You can now log in.");
+        setError(null);
+        // If your backend returns a token on signup, you can store it:
+        // if (data.access_token) localStorage.setItem("token", data.access_token);
+        // Optionally redirect to login page here
+      } else {
+        setError(data.msg || "Signup failed");
+        setSuccess(null);
+      }
     } catch (err) {
-      setError('Signup failed.');
+      setError("Network error. Please try again.");
+      setSuccess(null);
     } finally {
       setLoading(false);
     }
@@ -47,8 +54,8 @@ const Signup: React.FC = () => {
             <input
               type="text"
               className="mt-1 w-full border rounded px-3 py-2"
-              value={name}
-              onChange={e => setName(e.target.value)}
+              value={username}
+              onChange={e => setUsername(e.target.value)}
               required
             />
           </div>
@@ -72,17 +79,8 @@ const Signup: React.FC = () => {
               required
             />
           </div>
-          <div>
-            <label className="block text-gray-700">Confirm Password</label>
-            <input
-              type="password"
-              className="mt-1 w-full border rounded px-3 py-2"
-              value={confirmPassword}
-              onChange={e => setConfirmPassword(e.target.value)}
-              required
-            />
-          </div>
           {error && <div className="text-red-500 text-sm">{error}</div>}
+          {success && <div className="text-green-500 text-sm">{success}</div>}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
