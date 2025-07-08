@@ -1,4 +1,4 @@
-const API_URL = '';
+const API_URL = 'http://localhost:5000';
 
 // Create axios-like apiClient for consistent API calls
 export const apiClient = {

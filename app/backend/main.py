@@ -55,6 +55,20 @@ def create_app(config_name=None):
         except FileNotFoundError:
             return jsonify({'error': 'Image not found'}), 404
 
+    # Add static file serving for post media
+    @app.route('/static/posts/<filename>')
+    def serve_post_media(filename):
+        """Serve uploaded post media files (images/videos)"""
+        post_upload_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'posts')
+        try:
+            response = send_from_directory(post_upload_folder, filename)
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            return response
+        except FileNotFoundError:
+            return jsonify({'error': 'Media not found'}), 404
+
     # Register blueprints
     app.register_blueprint(auth_bp)
     app.register_blueprint(profile_bp)

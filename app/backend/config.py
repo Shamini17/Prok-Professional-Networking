@@ -6,7 +6,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-secret-key-here'
     
     # Database - Using SQLite for development (easier setup)
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///prok_app.db'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or f"sqlite:///{os.path.abspath(os.path.join(os.path.dirname(__file__), 'instance', 'prok_app.db'))}"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     # JWT
@@ -25,15 +25,24 @@ class Config:
         "http://localhost:3000",
         "http://localhost:5173",
         "http://localhost:5174",
+        "http://localhost:5176",
+        "http://localhost:5181",
+        "http://localhost:5182",
+        "http://localhost:5183",
         "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174"
+        "http://127.0.0.1:5174",
+        "http://127.0.0.1:5176",
+        "http://127.0.0.1:5181",
+        "http://127.0.0.1:5182",
+        "http://127.0.0.1:5183"
     ]
 
     # File upload settings
     UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'profile_images')
+    POSTS_UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'posts')
     MAX_CONTENT_LENGTH = 5 * 1024 * 1024  # 5MB
-    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'mov', 'avi', 'webm'}
     
     # Image processing settings
     MAX_IMAGE_SIZE = (800, 800)  # Maximum dimensions
