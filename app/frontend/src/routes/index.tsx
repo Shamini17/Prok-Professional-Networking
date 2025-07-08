@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Login from '../components/auth/Login';
 import Signup from '../components/auth/Signup';
+import Dashboard from '../components/Dashboard';
 import ProfileView from '../components/profile/ProfileView';
 import ProfileEdit from '../components/profile/ProfileEdit';
 import PostCreate from '../components/posts/PostCreate';
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <Login />,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />,
   },
   {
     path: '/login',
@@ -46,4 +51,5 @@ export const router = createBrowserRouter([
     path: '/messages',
     element: <MessageList />,
   },
+
 ]); 

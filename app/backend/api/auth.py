@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from models.user import User, db
 from utils.jwt_utils import create_token, token_required
+import re
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -10,16 +11,24 @@ def login():
     """Login endpoint"""
     try:
         data = request.get_json()
-        if not data or not data.get('username') or not data.get('password'):
-            return jsonify({'error': 'Username and password required'}), 400
+        if not data or not data.get('password'):
+            return jsonify({'error': 'Username/email and password required'}), 400
         
-        user = User.query.filter_by(username=data['username']).first()
+        # Try to find user by username or email
+        username_or_email = data.get('username') or data.get('email')
+        if not username_or_email:
+            return jsonify({'error': 'Username or email required'}), 400
+        
+        user = User.query.filter(
+            (User.username == username_or_email) | (User.email == username_or_email)
+        ).first()
+        
         if not user or not check_password_hash(user.password, data['password']):
-            return jsonify({'error': 'Invalid username or password'}), 401
+            return jsonify({'error': 'Invalid username/email or password'}), 401
         
         access_token = create_token(user.id)
         return jsonify({
-            'token': access_token,
+            'access_token': access_token,
             'user': user.to_dict()
         }), 200
     
@@ -33,6 +42,27 @@ def signup():
         data = request.get_json()
         if not data or not data.get('username') or not data.get('email') or not data.get('password'):
             return jsonify({'error': 'Username, email, and password required'}), 400
+        
+        # Username validation: only allow letters, numbers, and underscores
+        if not re.match(r'^\w+$', data['username']):
+            return jsonify({'error': 'Username can only contain letters, numbers, and underscores'}), 400
+        
+        # Password validation: must contain at least one capital, one small, one special char, and one number
+        password = data['password']
+        if len(password) < 8:
+            return jsonify({'error': 'Password must be at least 8 characters long'}), 400
+        
+        if not re.search(r'[A-Z]', password):
+            return jsonify({'error': 'Password must contain at least one capital letter'}), 400
+        
+        if not re.search(r'[a-z]', password):
+            return jsonify({'error': 'Password must contain at least one small letter'}), 400
+        
+        if not re.search(r'[0-9]', password):
+            return jsonify({'error': 'Password must contain at least one number'}), 400
+        
+        if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
+            return jsonify({'error': 'Password must contain at least one special character (!@#$%^&*(),.?":{}|<>)'}), 400
         
         # Check if user already exists
         if User.query.filter_by(username=data['username']).first():
@@ -53,13 +83,14 @@ def signup():
         
         access_token = create_token(new_user.id)
         return jsonify({
-            'token': access_token,
+            'access_token': access_token,
             'user': new_user.to_dict()
         }), 201
     
     except Exception as e:
         db.session.rollback()
-        return jsonify({'error': 'Internal server error'}), 500
+        print(f"Signup error: {str(e)}")  # Debug logging
+        return jsonify({'error': 'Internal server error', 'details': str(e)}), 500
 
 @auth_bp.route('/api/auth/me', methods=['GET'])
 @token_required

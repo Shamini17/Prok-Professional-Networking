@@ -226,34 +226,21 @@ def upload_profile_image(user_id):
         if not user:
             return jsonify({'error': 'User not found'}), 404
         
-        # Debug logging
-        logger.info(f"Image upload request for user {user_id}")
-        logger.info(f"Request files: {list(request.files.keys())}")
-        logger.info(f"Request content type: {request.content_type}")
-        
         # Check if file is present
         if 'image' not in request.files:
-            logger.error(f"No 'image' field in request files: {list(request.files.keys())}")
             return jsonify({'error': 'No file part'}), 400
         
         file = request.files['image']
-        logger.info(f"File received: {file.filename}, size: {file.content_length if hasattr(file, 'content_length') else 'unknown'}")
-        
         if file.filename == '':
-            logger.error("Empty filename received")
             return jsonify({'error': 'No selected file'}), 400
         
         # Validate file extension
-        logger.info(f"Validating file extension: {file.filename}")
         if not allowed_file(file.filename):
-            logger.error(f"Invalid file extension: {file.filename}")
             return jsonify({'error': 'Invalid file type. Only PNG, JPG, JPEG, GIF allowed'}), 400
         
         # Validate file content using magic numbers
-        logger.info("Validating file content")
         is_valid, error_msg = validate_file_content(file)
         if not is_valid:
-            logger.error(f"File content validation failed: {error_msg}")
             return jsonify({'error': error_msg}), 400
         
         # Check file size
@@ -382,9 +369,7 @@ def update_skills(user_id):
         # Limit number of skills
         if len(skills_list) > 20:
             return jsonify({'error': 'Maximum 20 skills allowed'}), 400
-        # Enforce minimum number of skills
-        if len(skills_list) < 3:
-            return jsonify({'error': 'At least 3 skills are required'}), 400
+        
         # Update skills
         user.set_skills_list(skills_list)
         db.session.commit()

@@ -1,0 +1,1070 @@
+nohup: ignoring input
+INFO:main:Database tables created successfully
+INFO:main:Starting Prok Professional Networking API...
+INFO:main:Environment: development
+INFO:main:Database: sqlite:///prok_app.db
+INFO:main:Upload folder: /home/baby-shamini/Prok-Professional-Networking/app/backend/uploads/profile_images
+ * Serving Flask app 'main'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:main:Database tables created successfully
+INFO:main:Starting Prok Professional Networking API...
+INFO:main:Environment: development
+INFO:main:Database: sqlite:///prok_app.db
+INFO:main:Upload folder: /home/baby-shamini/Prok-Professional-Networking/app/backend/uploads/profile_images
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-607-873
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:18:21] "HEAD /static/profile_images/profile_1_1751728960.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:28] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:43] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:19:55] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:21:58] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:22:03] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:08] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:10] "HEAD /static/profile_images/profile_1_1751728960.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:28] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:37] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:23:53] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:24:04] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:15] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:18] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:37] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:api.profile:Education updated for user 4
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "PUT /api/profile HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:25:39] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:33] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:26:55] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:06] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "PUT /api/profile HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:08] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:api.profile:Certifications updated for user 4
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:52] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:53] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:53] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:53] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:53] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:27:53] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:32] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:34] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:28:48] "HEAD /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:29:20] "GET /static/profile_images/profile_1_1751728960.png HTTP/1.1" 200 -
+INFO:api.profile:Image processed: profile_1_1751731160.png (200x200 -> 200x200)
+INFO:api.profile:Profile image uploaded for user 1: profile_1_1751731160.png
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:29:20] "POST /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:29:23] "HEAD /static/profile_images/profile_1_1751731160.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:35] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "PUT /api/profile HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:30:37] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:36] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:37] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:37] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:37] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:31:38] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:00] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:14] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:15] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:15] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:15] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:15] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:15] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:33:28] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:16] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:api.profile:Education updated for user 4
+INFO:api.profile:Certifications updated for user 4
+INFO:api.profile:Social links updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:34:18] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:51] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 4
+INFO:api.profile:Skills updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 4
+INFO:api.profile:Social links updated for user 4
+INFO:api.profile:Certifications updated for user 4
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:35:52] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:37:56] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:38:16] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:39:24] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:39:32] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:39:35] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:39:38] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:40:31] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:40:34] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:40:38] "[33mPOST /api/profile/upload-image HTTP/1.1[0m" 404 -
+INFO:api.profile:Image processed: profile_4_1751731846.png (200x200 -> 200x200)
+INFO:api.profile:Profile image uploaded for user 4: profile_4_1751731846.png
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:40:46] "POST /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:40:55] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:41:02] "HEAD /static/profile_images/profile_4_1751731846.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:42:05] "OPTIONS /api/auth/signup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:42:05] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:42:35] "OPTIONS /api/auth/signup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:42:35] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:02] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:02] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:04] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:43:19] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:24] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Image processed: profile_4_1751732130.png (200x200 -> 200x200)
+INFO:api.profile:Profile image uploaded for user 4: profile_4_1751732130.png
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:45:30] "POST /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:47:42] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/baby-shamini/Prok-Professional-Networking/app/backend/api/profile.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:Database tables created successfully
+INFO:main:Starting Prok Professional Networking API...
+INFO:main:Environment: development
+INFO:main:Database: sqlite:///prok_app.db
+INFO:main:Upload folder: /home/baby-shamini/Prok-Professional-Networking/app/backend/uploads/profile_images
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-607-873
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:api.profile:Upload request received for user 5
+INFO:api.profile:Request method: POST
+INFO:api.profile:Request headers: {'Host': 'localhost:5000', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0', 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Referer': 'http://localhost:5173/', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NTE3MzU1ODIsImlhdCI6MTc1MTczMTk4Mn0.RsFyy5mOj0iotNyM8vcDj-1-ovFoqqA3GDXCnF6QJMk', 'Content-Type': 'multipart/form-data', 'Content-Length': '1901849', 'Origin': 'http://localhost:5173', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'Priority': 'u=0'}
+INFO:api.profile:Request files: No files
+INFO:api.profile:Request form: {}
+ERROR:api.profile:No 'image' field in request.files. Available keys: []
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:48:26] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Upload request received for user 4
+INFO:api.profile:Request method: POST
+INFO:api.profile:Request headers: {'Host': 'localhost:5000', 'User-Agent': 'curl/8.5.0', 'Accept': '*/*', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3NTE3MzU0MzEsImlhdCI6MTc1MTczMTgzMX0.fKConxXQfjosOPpLY4ijYuALMgMELOGFfQjAlBSL00g', 'Content-Length': '1389', 'Content-Type': 'multipart/form-data; boundary=------------------------TL9seFQQE1w3yYdgfg8Adx'}
+INFO:api.profile:Request files: ['image']
+INFO:api.profile:Request form: {}
+INFO:api.profile:Image processed: profile_4_1751732375.png (200x200 -> 200x200)
+INFO:api.profile:Profile image uploaded for user 4: profile_4_1751732375.png
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:49:35] "POST /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:46] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:47] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:47] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:47] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:47] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:47] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:54] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:50:54] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:12] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:api.profile:Upload request received for user 5
+INFO:api.profile:Request method: POST
+INFO:api.profile:Request headers: {'Host': 'localhost:5000', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0', 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Referer': 'http://localhost:5173/', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NTE3MzU1ODIsImlhdCI6MTc1MTczMTk4Mn0.RsFyy5mOj0iotNyM8vcDj-1-ovFoqqA3GDXCnF6QJMk', 'Content-Type': 'multipart/form-data; boundary=----geckoformboundary599449c9cc3488b9c8ef03a6ff7d2a16', 'Content-Length': '1901849', 'Origin': 'http://localhost:5173', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'Priority': 'u=0'}
+INFO:api.profile:Request files: ['image']
+INFO:api.profile:Request form: {}
+INFO:api.profile:Image processed: profile_5_1751732472.jpg (6000x4000 -> 800x533)
+INFO:api.profile:Profile image uploaded for user 5: profile_5_1751732472.jpg
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:13] "POST /api/profile/image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "OPTIONS /api/profile/image HTTP/1.1" 200 -
+INFO:api.profile:Upload request received for user 5
+INFO:api.profile:Request method: POST
+INFO:api.profile:Request headers: {'Host': 'localhost:5000', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0', 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Referer': 'http://localhost:5173/', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NTE3MzU1ODIsImlhdCI6MTc1MTczMTk4Mn0.RsFyy5mOj0iotNyM8vcDj-1-ovFoqqA3GDXCnF6QJMk', 'Content-Type': 'multipart/form-data', 'Content-Length': '1901849', 'Origin': 'http://localhost:5173', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'Priority': 'u=0'}
+INFO:api.profile:Request files: No files
+INFO:api.profile:Request form: {}
+ERROR:api.profile:No 'image' field in request.files. Available keys: []
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "[31m[1mPOST /api/profile/image HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:51:25] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732485729 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732560399 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:40] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732560442 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732573173 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732573206 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732573207 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732574680 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:52:54] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732574708 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732583045 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:03] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732583079 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732597129 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732597168 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732609107 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:29] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732609145 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/baby-shamini/Prok-Professional-Networking/app/backend/api/profile.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:Database tables created successfully
+INFO:main:Starting Prok Professional Networking API...
+INFO:main:Environment: development
+INFO:main:Database: sqlite:///prok_app.db
+INFO:main:Upload folder: /home/baby-shamini/Prok-Professional-Networking/app/backend/uploads/profile_images
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-607-873
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732633473 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732633515 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732633516 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732638258 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732638272 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:53:58] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732638273 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732653208 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732653209 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732653232 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:16] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732656008 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:16] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732656009 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "PUT /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732662562 HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:api.profile:Social links updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:54:22] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732662641 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732707884 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:07] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732707930 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732728197 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732735536 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:55:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732735546 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:05] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732765313 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:08] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732768940 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732769161 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732769540 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:10] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732770355 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:10] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732770854 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:10] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732770885 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:11] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732771755 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:12] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732772118 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732773020 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732773359 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732773459 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732773926 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732774160 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732774711 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732774924 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:15] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732775346 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:15] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732775834 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:16] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732776169 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:16] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732776527 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732777281 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732777447 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732777600 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732777775 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732777924 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:18] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732778252 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:19] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732779051 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:19] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732779481 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:19] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732779717 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:20] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732780067 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:20] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732780378 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:20] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732780714 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:21] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732781798 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:22] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732782560 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:22] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732782808 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:23] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732783249 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:23] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732783485 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:24] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732784254 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:24] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732784471 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:24] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732784863 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:25] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732785335 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:25] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732785751 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:25] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732785924 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:26] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732786350 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732788048 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:34] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732794895 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732795282 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732795494 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732795690 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:36] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732796092 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:36] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732796352 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:36] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732796882 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:37] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732797474 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:37] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732797851 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:40] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732800547 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:42] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732802320 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:42] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732802729 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:49] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732809243 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:49] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732809343 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:49] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732809450 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:50] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732810207 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:50] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732810418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:50] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732810644 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:51] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732811467 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:51] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732811671 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:51] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732811892 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732813142 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:56:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732813581 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:00] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732820425 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:03] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732823432 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732829731 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:10] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732830565 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:10] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732830846 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:11] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732831388 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:11] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732831607 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:11] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732831960 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:12] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732832260 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:12] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732832487 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732833125 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732833297 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732834784 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:23] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732843854 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:24] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732844433 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:24] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732844716 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:25] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732845750 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:26] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732846015 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:26] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732846445 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:26] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732846631 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:26] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732846902 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:27] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732847070 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:27] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732847776 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732848147 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732848322 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732848622 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:29] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732849306 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:30] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732850181 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:30] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732850463 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:30] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732850917 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:31] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732851144 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:31] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732851369 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:31] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732851963 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:32] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732852219 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:34] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732854386 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732855026 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:38] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732858406 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:38] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732858786 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:39] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732859210 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:39] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732859695 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:40] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732860559 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:40] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732860777 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:41] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732861479 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:41] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732861812 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:42] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732862043 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:45] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732865282 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:45] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732865550 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732867482 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732867733 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732867992 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:49] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732869073 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:49] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732869303 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:49] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732869828 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:50] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732870254 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:50] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732870503 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:50] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732870783 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:51] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732871092 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:52] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732872565 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:52] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732872857 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732873162 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732873691 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:54] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732874000 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:54] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732874585 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:54] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732874853 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:55] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732875055 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:55] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732875702 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:57:55] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732875980 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:01] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732881805 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:02] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732882063 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:02] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732882499 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:03] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732883341 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:03] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732883841 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:03] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732883872 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:04] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732884895 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:05] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732885168 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:05] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732885592 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:05] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732885962 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732886197 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732886588 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732886824 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:07] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732887182 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:12] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732892058 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:12] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732892335 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:12] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732892645 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732893037 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732893728 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732894110 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732894388 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732894533 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:15] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732895632 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:15] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732895954 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:16] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732896715 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:16] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732896888 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:17] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732897182 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:18] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732898247 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:18] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732898965 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:19] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732899292 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:19] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732899722 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:20] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732900188 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:20] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732900462 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:20] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732900692 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:21] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732901632 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:25] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732905958 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:26] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732906375 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:27] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732907032 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:27] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732907314 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:27] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732907677 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732908035 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732908365 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:28] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732908682 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:29] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732909024 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:29] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732909324 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732915260 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732915571 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:35] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732915833 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:41] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732921520 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:42] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732922238 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:43] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732923349 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:43] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732923821 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:44] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732924166 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:44] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732924425 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:44] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732924835 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:45] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732925132 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:45] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732925344 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:45] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732925445 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:45] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732925955 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:46] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732926250 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:46] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732926480 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:46] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732926863 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732927089 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732927523 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732927730 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:47] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732927988 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:48] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732928294 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:48] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732928620 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+ERROR:api.profile:Error updating profile: '<' not supported between instances of 'str' and 'int'
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "[35m[1mPUT /api/profile HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:52] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732932976 HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 5
+INFO:api.profile:Social links updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:58:53] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732933037 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:01] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732941714 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:05] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732945652 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732945995 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732946385 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732946560 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:06] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732946786 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:07] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732947564 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:07] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732947794 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:08] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732948373 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:08] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732948708 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732949003 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732949323 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732949581 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:09] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732949804 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:10] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732950606 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:11] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732951023 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "OPTIONS /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "OPTIONS /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "OPTIONS /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "OPTIONS /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "OPTIONS /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732953960 HTTP/1.1" 200 -
+INFO:api.profile:Profile updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "PUT /api/profile HTTP/1.1" 200 -
+INFO:api.profile:Skills updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "PUT /api/profile/skills HTTP/1.1" 200 -
+INFO:api.profile:Certifications updated for user 5
+INFO:api.profile:Social links updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "PUT /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:13] "PUT /api/profile/social-links HTTP/1.1" 200 -
+INFO:api.profile:Education updated for user 5
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "PUT /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "GET /api/profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "GET /api/profile/skills HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "GET /api/profile/education HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "GET /api/profile/certifications HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "GET /api/profile/social-links HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jul/2025 21:59:14] "GET /static/profile_images/profile_5_1751732472.jpg?t=1751732954028 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/baby-shamini/Prok-Professional-Networking/app/backend/models/user.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:Database tables created successfully
+INFO:main:Starting Prok Professional Networking API...
+INFO:main:Environment: development
+INFO:main:Database: sqlite:///prok_app.db
+INFO:main:Upload folder: /home/baby-shamini/Prok-Professional-Networking/app/backend/uploads/profile_images
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 337-607-873
+INFO:werkzeug: * Detected change in '/home/baby-shamini/Prok-Professional-Networking/app/backend/api/profile.py', reloading
+INFO:werkzeug: * Restarting with stat
+Traceback (most recent call last):
+  File "/home/baby-shamini/Prok-Professional-Networking/app/backend/main.py", line 11, in <module>
+    from api.auth import auth_bp
+  File "/home/baby-shamini/Prok-Professional-Networking/app/backend/api/__init__.py", line 2, in <module>
+    from .profile import profile_bp
+  File "/home/baby-shamini/Prok-Professional-Networking/app/backend/api/profile.py", line 125
+    continue
+    ^^^^^^^^
+SyntaxError: 'continue' not properly in loop

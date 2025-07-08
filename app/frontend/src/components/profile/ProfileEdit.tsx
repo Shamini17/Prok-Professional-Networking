@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getProfile, updateProfile, uploadProfileImage, getSkills, updateSkills } from './api';
+import { profileApi } from './api';
 import type { ProfileData, ImageUploadResponse } from './api';
 
 const ProfileEdit: React.FC = () => {
@@ -32,6 +32,7 @@ const ProfileEdit: React.FC = () => {
   const [imageUploading, setImageUploading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [skillsError, setSkillsError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -39,8 +40,8 @@ const ProfileEdit: React.FC = () => {
       setError(null);
       try {
         const [profileData, skillsData] = await Promise.all([
-          getProfile(),
-          getSkills()
+          profileApi.getProfile(),
+          profileApi.getSkills()
         ]);
         
         setProfile(profileData);
@@ -91,7 +92,14 @@ const ProfileEdit: React.FC = () => {
     e.preventDefault();
     setError(null);
     setSuccess(null);
+    setSkillsError(null);
     setSaving(true);
+    // Frontend validation for minimum 3 skills
+    if (formData.skills.length < 3) {
+      setSkillsError('Please enter at least 3 skills.');
+      setSaving(false);
+      return;
+    }
     
     try {
       // Update profile data
@@ -113,14 +121,14 @@ const ProfileEdit: React.FC = () => {
 
       // Update skills separately
       await Promise.all([
-        updateProfile(profileUpdateData),
-        updateSkills(formData.skills)
+        profileApi.updateProfile(profileUpdateData),
+        profileApi.updateSkills(formData.skills)
       ]);
 
       setSuccess('Profile updated successfully!');
       
       // Refresh profile data
-      const updatedProfile = await getProfile();
+      const updatedProfile = await profileApi.getProfile();
       setProfile(updatedProfile);
     } catch (err: any) {
       setError(err.message || 'Failed to update profile');
@@ -161,7 +169,7 @@ const ProfileEdit: React.FC = () => {
     setImageUploading(true);
     
     try {
-      const res: ImageUploadResponse = await uploadProfileImage(image);
+      const res: ImageUploadResponse = await profileApi.uploadImage(image);
       setImageUrl(res.image_url);
       setSuccess('Image uploaded successfully!');
       setImage(null);
@@ -225,11 +233,11 @@ const ProfileEdit: React.FC = () => {
             <div className="flex items-center space-x-4">
               {imageUrl && (
                 <div className="relative">
-                  <img 
-                    src={imageUrl} 
-                    alt="Profile" 
-                    className="w-24 h-24 rounded-full object-cover border-2 border-gray-200"
-                  />
+                <img 
+                  src={imageUrl} 
+                  alt="Profile" 
+                  className="w-24 h-24 rounded-full object-cover border-2 border-gray-200"
+                />
                   {image && (
                     <button
                       type="button"
@@ -253,14 +261,14 @@ const ProfileEdit: React.FC = () => {
                   <p className="text-red-500 text-sm mt-1">{imageError}</p>
                 )}
                 <div className="flex space-x-2 mt-2">
-                  <button
-                    type="button"
-                    onClick={handleImageUpload}
-                    disabled={!image || imageUploading}
+                <button
+                  type="button"
+                  onClick={handleImageUpload}
+                  disabled={!image || imageUploading}
                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {imageUploading ? 'Uploading...' : 'Upload Image'}
-                  </button>
+                >
+                  {imageUploading ? 'Uploading...' : 'Upload Image'}
+                </button>
                   {image && (
                     <button
                       type="button"
@@ -414,6 +422,7 @@ const ProfileEdit: React.FC = () => {
                   placeholder="JavaScript, React, Python, etc."
                 />
                 <p className="text-xs text-gray-500 mt-1">{formData.skills.length} skills added</p>
+                {skillsError && <p className="text-red-500 text-sm mt-1">{skillsError}</p>}
               </div>
             </div>
           </div>

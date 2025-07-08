@@ -1,101 +1,149 @@
-from flask import Flask, send_from_directory
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-from config import Config
-from dotenv import load_dotenv
+from config import config
 import os
-
-# Load environment variables
-load_dotenv()
+import logging
 
 # Import models
-from models.user import User, db as user_db
-# from models.profile import Profile, Skill, Experience, Education, db as profile_db
+from models.user import db
 
 # Import blueprints
 from api.auth import auth_bp
 from api.profile import profile_bp
+from api.posts import posts_bp
+from api.feed import feed_bp
+from api.jobs import jobs_bp
+from api.messaging import messaging_bp
 
-# Create Flask app
-app = Flask(__name__)
-app.config.from_object(Config)
+def create_app(config_name=None):
+    """Application factory pattern"""
+    if config_name is None:
+        config_name = os.environ.get('FLASK_CONFIG', 'default')
+    
+    app = Flask(__name__)
+    
+    # Load configuration
+    app.config.from_object(config[config_name])
+    config[config_name].init_app(app)
 
-# Initialize CORS with explicit origins for development
-CORS(app, 
-     supports_credentials=True, 
-     origins=["http://localhost:5173", "http://127.0.0.1:5173"],
-     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-     allow_headers=["Content-Type", "Authorization"])
+    # Initialize extensions
+    db.init_app(app)
+    
+    # Configure CORS
+    CORS(app, resources={
+        r"/api/*": {
+            "origins": app.config.get('CORS_ORIGINS', ["http://localhost:3000", "http://localhost:5173"]),
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+            "allow_headers": ["Content-Type", "Authorization"],
+            "supports_credentials": True
+        }
+    })
+    
+    # Static file serving for uploaded images
+    @app.route('/static/profile_images/<filename>')
+    def serve_profile_image(filename):
+        """Serve uploaded profile images"""
+        try:
+            response = send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+            
+            # Add CORS headers for image serving
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            
+            return response
+        except FileNotFoundError:
+            return jsonify({'error': 'Image not found'}), 404
 
-# Initialize rate limiter
-limiter = Limiter(
-    app=app,
-    key_func=get_remote_address,
-    default_limits=["200 per day", "50 per hour"]
-)
-
-# Initialize database
-# Use the db from models.user
-user_db.init_app(app)
-db = user_db
-
-def setup_database():
-    """Setup database tables"""
+    # Register blueprints
+    app.register_blueprint(auth_bp)
+    app.register_blueprint(profile_bp)
+    app.register_blueprint(posts_bp)
+    app.register_blueprint(feed_bp)
+    app.register_blueprint(jobs_bp)
+    app.register_blueprint(messaging_bp)
+    
+    # Error handlers
+    @app.errorhandler(400)
+    def bad_request(error):
+        return jsonify({'error': 'Bad request', 'message': str(error)}), 400
+    
+    @app.errorhandler(401)
+    def unauthorized(error):
+        return jsonify({'error': 'Unauthorized', 'message': 'Authentication required'}), 401
+    
+    @app.errorhandler(403)
+    def forbidden(error):
+        return jsonify({'error': 'Forbidden', 'message': 'Access denied'}), 403
+    
+    @app.errorhandler(404)
+    def not_found(error):
+        return jsonify({'error': 'Not found', 'message': 'Resource not found'}), 404
+    
+    @app.errorhandler(413)
+    def file_too_large(error):
+        return jsonify({'error': 'File too large', 'message': 'File size exceeds limit'}), 413
+    
+    @app.errorhandler(500)
+    def internal_error(error):
+        app.logger.error(f'Server Error: {error}')
+        return jsonify({'error': 'Internal server error', 'message': 'Something went wrong'}), 500
+    
+    # Health check endpoint
+    @app.route('/health')
+    def health_check():
+        return jsonify({
+            'status': 'healthy',
+            'message': 'Prok Professional Networking API is running',
+            'version': '1.0.0'
+        })
+    
+    # Root endpoint
+    @app.route('/')
+    def root():
+        return jsonify({
+            'message': 'Welcome to Prok Professional Networking API',
+            'version': '1.0.0',
+            'endpoints': {
+                'auth': '/api/auth/*',
+                'profile': '/api/profile/*',
+                'posts': '/api/posts/*',
+                'feed': '/api/feed/*',
+                'jobs': '/api/jobs/*',
+                'messaging': '/api/messaging/*'
+            }
+        })
+    
+    # Create database tables
     with app.app_context():
-        db.create_all()
-        print("✅ Database tables created successfully!")
-
-# Create upload directory if it doesn't exist
-def setup_upload_directory():
-    """Setup upload directory"""
-    upload_folder = app.config['UPLOAD_FOLDER']
-    os.makedirs(upload_folder, exist_ok=True)
-    print(f"✅ Upload directory created: {upload_folder}")
-
-# Static file serving for uploaded images
-@app.route('/static/profile_images/<filename>')
-def serve_profile_image(filename):
-    """Serve uploaded profile images"""
-    try:
-        return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-    except FileNotFoundError:
-        return {'error': 'Image not found'}, 404
-
-# Error handlers
-@app.errorhandler(413)
-def too_large(e):
-    return {'error': 'File too large'}, 413
-
-@app.errorhandler(404)
-def not_found(e):
-    return {'error': 'Resource not found'}, 404
-
-@app.errorhandler(500)
-def internal_error(e):
-    return {'error': 'Internal server error'}, 500
-
-# Register blueprints
-app.register_blueprint(auth_bp)
-app.register_blueprint(profile_bp)
-
-# Create a function to initialize the app
-def create_app():
-    """Application factory function"""
+        try:
+            db.create_all()
+            app.logger.info("Database tables created successfully")
+        except Exception as e:
+            app.logger.error(f"Error creating database tables: {e}")
+    
     return app
 
 if __name__ == '__main__':
-    # Setup database tables
-    setup_database()
+    # Set environment variables
+    os.environ['FLASK_APP'] = 'main.py'
+    os.environ['FLASK_ENV'] = 'development'
     
-    # Setup upload directory
-    setup_upload_directory()
+    # Create and run app
+    app = create_app()
     
-    # Run the app
-    print("🚀 Starting Flask server on http://localhost:5000")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Log startup information
+    app.logger.info("Starting Prok Professional Networking API...")
+    app.logger.info(f"Environment: {os.environ.get('FLASK_ENV', 'development')}")
+    app.logger.info(f"Database: {app.config['SQLALCHEMY_DATABASE_URI']}")
+    app.logger.info(f"Upload folder: {app.config['UPLOAD_FOLDER']}")
+    
+    # Run the application
+    app.run(
+        host='0.0.0.0',
+        port=5000,
+        debug=app.config.get('DEBUG', False)
+    )
 
 # For Flask CLI discovery
-# This allows 'flask run' to work by exposing 'app' at module level
-# (Flask looks for 'app' or 'application' by default) 
+app = create_app() 

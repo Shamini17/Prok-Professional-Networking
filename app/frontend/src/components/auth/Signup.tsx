@@ -9,6 +9,26 @@ const Signup: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
+  // Password validation states
+  const [passwordValidation, setPasswordValidation] = useState({
+    length: false,
+    capital: false,
+    small: false,
+    number: false,
+    special: false
+  });
+
+  // Password validation function
+  const validatePassword = (password: string) => {
+    setPasswordValidation({
+      length: password.length >= 8,
+      capital: /[A-Z]/.test(password),
+      small: /[a-z]/.test(password),
+      number: /[0-9]/.test(password),
+      special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -16,7 +36,7 @@ const Signup: React.FC = () => {
     setSuccess(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/signup", {
+      const response = await fetch("/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +53,7 @@ const Signup: React.FC = () => {
         // if (data.access_token) localStorage.setItem("token", data.access_token);
         // Optionally redirect to login page here
       } else {
-        setError(data.msg || "Signup failed");
+        setError(data.error || data.msg || "Signup failed");
         setSuccess(null);
       }
     } catch (err) {
@@ -58,6 +78,11 @@ const Signup: React.FC = () => {
               onChange={e => setUsername(e.target.value)}
               required
             />
+            {username && (
+              <div className="mt-1 text-xs text-gray-600">
+                Only letters, numbers, and underscores allowed
+              </div>
+            )}
           </div>
           <div>
             <label className="block text-gray-700">Email</label>
@@ -75,9 +100,32 @@ const Signup: React.FC = () => {
               type="password"
               className="mt-1 w-full border rounded px-3 py-2"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={e => {
+                setPassword(e.target.value);
+                validatePassword(e.target.value);
+              }}
               required
             />
+            {/* Password validation feedback */}
+            {password && (
+              <div className="mt-2 space-y-1">
+                <div className={`text-xs ${passwordValidation.length ? 'text-green-600' : 'text-red-600'}`}>
+                  ✓ At least 8 characters long
+                </div>
+                <div className={`text-xs ${passwordValidation.capital ? 'text-green-600' : 'text-red-600'}`}>
+                  ✓ At least one capital letter (A-Z)
+                </div>
+                <div className={`text-xs ${passwordValidation.small ? 'text-green-600' : 'text-red-600'}`}>
+                  ✓ At least one small letter (a-z)
+                </div>
+                <div className={`text-xs ${passwordValidation.number ? 'text-green-600' : 'text-red-600'}`}>
+                  ✓ At least one number (0-9)
+                </div>
+                <div className={`text-xs ${passwordValidation.special ? 'text-green-600' : 'text-red-600'}`}>
+                  ✓ At least one special character (!@#$%^&*(),.?":{}|&lt;&gt;)
+                </div>
+              </div>
+            )}
           </div>
           {error && <div className="text-red-500 text-sm">{error}</div>}
           {success && <div className="text-green-500 text-sm">{success}</div>}

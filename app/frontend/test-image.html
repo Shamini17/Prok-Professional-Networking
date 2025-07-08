@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-image { width: 200px; height: 200px; object-fit: cover; border: 2px solid #ccc; margin: 10px; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Image Test Page</h1>
+    <p>Testing image serving through Vite proxy...</p>
+    
+    <div id="results"></div>
+    
+    <h2>Test Images:</h2>
+    <div>
+        <img src="/static/profile_images/profile_5_1751732472.jpg" alt="Test Image 1" class="test-image" onload="logSuccess('Image 1 loaded')" onerror="logError('Image 1 failed')">
+        <img src="/static/profile_images/profile_1_1751731160.png" alt="Test Image 2" class="test-image" onload="logSuccess('Image 2 loaded')" onerror="logError('Image 2 failed')">
+    </div>
+
+    <script>
+        function logSuccess(message) {
+            console.log('✅ ' + message);
+            document.getElementById('results').innerHTML += '<p class="success">✅ ' + message + '</p>';
+        }
+        
+        function logError(message) {
+            console.error('❌ ' + message);
+            document.getElementById('results').innerHTML += '<p class="error">❌ ' + message + '</p>';
+        }
+        
+        // Test direct fetch
+        fetch('/static/profile_images/profile_5_1751732472.jpg')
+            .then(response => {
+                if (response.ok) {
+                    logSuccess('Direct fetch successful');
+                } else {
+                    logError('Direct fetch failed: ' + response.status);
+                }
+            })
+            .catch(error => {
+                logError('Direct fetch error: ' + error.message);
+            });
+    </script>
+</body>
+</html> 
