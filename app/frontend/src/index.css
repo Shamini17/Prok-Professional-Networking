@@ -22,4 +22,11 @@
   .input {
     @apply px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
   }
+  .profile-fadein {
+    animation: profileFadeIn 0.7s ease;
+  }
+  @keyframes profileFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
 }

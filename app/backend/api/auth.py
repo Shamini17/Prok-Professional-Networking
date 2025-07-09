@@ -29,7 +29,7 @@ def login():
         access_token = create_token(user.id)
         return jsonify({
             'access_token': access_token,
-            'user': user.to_dict()
+            'user': user.to_dict(include_sensitive=True)
         }), 200
     
     except Exception as e:
@@ -84,7 +84,7 @@ def signup():
         access_token = create_token(new_user.id)
         return jsonify({
             'access_token': access_token,
-            'user': new_user.to_dict()
+            'user': new_user.to_dict(include_sensitive=True)
         }), 201
     
     except Exception as e:

@@ -31,6 +31,7 @@ export interface ProfileData {
   full_name?: string;
   profile_completion?: number;
   is_complete?: boolean;
+  banner_url?: string;
 }
 
 export interface ProfileUpdateData {
@@ -138,6 +139,18 @@ export const profileApi = {
     const response = await apiClient.post('/api/profile/image', formData, {
     headers: {
         // Don't set Content-Type for FormData - let browser set it automatically
+      },
+    });
+    return response.data;
+  },
+
+  // Upload banner image
+  uploadBanner: async (file: File): Promise<{ banner_url: string }> => {
+    const formData = new FormData();
+    formData.append('banner', file);
+    const response = await apiClient.post('/api/profile/banner', formData, {
+      headers: {
+        // Let browser set Content-Type
       },
     });
     return response.data;

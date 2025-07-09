@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -8,6 +8,7 @@ const Signup: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   // Password validation states
   const [passwordValidation, setPasswordValidation] = useState({
@@ -35,8 +36,16 @@ const Signup: React.FC = () => {
     setError(null);
     setSuccess(null);
 
+    // Check if all password validations pass
+    const allValid = Object.values(passwordValidation).every(Boolean);
+    if (!allValid) {
+      setError("Please ensure your password meets all requirements.");
+      setLoading(false);
+      return;
+    }
+
     try {
-      const response = await fetch("/api/auth/signup", {
+      const response = await fetch("http://localhost:5000/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,17 +56,17 @@ const Signup: React.FC = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccess("Signup successful! You can now log in.");
+        setSuccess("Account created successfully! Redirecting to login...");
         setError(null);
-        // If your backend returns a token on signup, you can store it:
-        // if (data.access_token) localStorage.setItem("token", data.access_token);
-        // Optionally redirect to login page here
+        setTimeout(() => {
+          navigate('/login');
+        }, 2000);
       } else {
-        setError(data.error || data.msg || "Signup failed");
+        setError(data.error || data.msg || "Signup failed. Please try again.");
         setSuccess(null);
       }
     } catch (err) {
-      setError("Network error. Please try again.");
+      setError("Network error. Please check your connection and try again.");
       setSuccess(null);
     } finally {
       setLoading(false);
@@ -65,81 +74,191 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-50">
-      <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow mt-16 mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-900">Sign Up</h2>
-        <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
-            <label className="block text-gray-700">Username</label>
-            <input
-              type="text"
-              className="mt-1 w-full border rounded px-3 py-2"
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-              required
-            />
-            {username && (
-              <div className="mt-1 text-xs text-gray-600">
-                Only letters, numbers, and underscores allowed
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Join Us</h1>
+          <p className="text-gray-600">Create your account to get started</p>
+        </div>
+        
+        <div className="bg-white rounded-xl shadow-lg p-8">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+                Username
+              </label>
+              <input
+                id="username"
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                placeholder="Choose a username"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+                required
+              />
+              {username && (
+                <p className="mt-1 text-xs text-gray-500">
+                  Only letters, numbers, and underscores allowed
+                </p>
+              )}
+            </div>
+            
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email Address
+              </label>
+              <input
+                id="email"
+                type="email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                placeholder="Enter your email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                Password
+              </label>
+              <input
+                id="password"
+                type="password"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                placeholder="Create a strong password"
+                value={password}
+                onChange={e => {
+                  setPassword(e.target.value);
+                  validatePassword(e.target.value);
+                }}
+                required
+              />
+              
+              {/* Password validation feedback */}
+              {password && (
+                <div className="mt-3 p-3 bg-gray-50 rounded-lg space-y-2">
+                  <p className="text-xs font-medium text-gray-700 mb-2">Password requirements:</p>
+                  <div className={`text-xs flex items-center ${passwordValidation.length ? 'text-green-600' : 'text-red-600'}`}>
+                    <svg className={`w-3 h-3 mr-2 ${passwordValidation.length ? 'text-green-500' : 'text-red-500'}`} fill="currentColor" viewBox="0 0 20 20">
+                      {passwordValidation.length ? (
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      ) : (
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      )}
+                    </svg>
+                    At least 8 characters long
+                  </div>
+                  <div className={`text-xs flex items-center ${passwordValidation.capital ? 'text-green-600' : 'text-red-600'}`}>
+                    <svg className={`w-3 h-3 mr-2 ${passwordValidation.capital ? 'text-green-500' : 'text-red-500'}`} fill="currentColor" viewBox="0 0 20 20">
+                      {passwordValidation.capital ? (
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      ) : (
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      )}
+                    </svg>
+                    At least one capital letter (A-Z)
+                  </div>
+                  <div className={`text-xs flex items-center ${passwordValidation.small ? 'text-green-600' : 'text-red-600'}`}>
+                    <svg className={`w-3 h-3 mr-2 ${passwordValidation.small ? 'text-green-500' : 'text-red-500'}`} fill="currentColor" viewBox="0 0 20 20">
+                      {passwordValidation.small ? (
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      ) : (
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      )}
+                    </svg>
+                    At least one small letter (a-z)
+                  </div>
+                  <div className={`text-xs flex items-center ${passwordValidation.number ? 'text-green-600' : 'text-red-600'}`}>
+                    <svg className={`w-3 h-3 mr-2 ${passwordValidation.number ? 'text-green-500' : 'text-red-500'}`} fill="currentColor" viewBox="0 0 20 20">
+                      {passwordValidation.number ? (
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      ) : (
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      )}
+                    </svg>
+                    At least one number (0-9)
+                  </div>
+                  <div className={`text-xs flex items-center ${passwordValidation.special ? 'text-green-600' : 'text-red-600'}`}>
+                    <svg className={`w-3 h-3 mr-2 ${passwordValidation.special ? 'text-green-500' : 'text-red-500'}`} fill="currentColor" viewBox="0 0 20 20">
+                      {passwordValidation.special ? (
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      ) : (
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      )}
+                    </svg>
+                    At least one special character (!@#$%^&*(),.?":{}|&lt;&gt;)
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm text-red-800">{error}</p>
+                  </div>
+                </div>
               </div>
             )}
-          </div>
-          <div>
-            <label className="block text-gray-700">Email</label>
-            <input
-              type="email"
-              className="mt-1 w-full border rounded px-3 py-2"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">Password</label>
-            <input
-              type="password"
-              className="mt-1 w-full border rounded px-3 py-2"
-              value={password}
-              onChange={e => {
-                setPassword(e.target.value);
-                validatePassword(e.target.value);
-              }}
-              required
-            />
-            {/* Password validation feedback */}
-            {password && (
-              <div className="mt-2 space-y-1">
-                <div className={`text-xs ${passwordValidation.length ? 'text-green-600' : 'text-red-600'}`}>
-                  ✓ At least 8 characters long
-                </div>
-                <div className={`text-xs ${passwordValidation.capital ? 'text-green-600' : 'text-red-600'}`}>
-                  ✓ At least one capital letter (A-Z)
-                </div>
-                <div className={`text-xs ${passwordValidation.small ? 'text-green-600' : 'text-red-600'}`}>
-                  ✓ At least one small letter (a-z)
-                </div>
-                <div className={`text-xs ${passwordValidation.number ? 'text-green-600' : 'text-red-600'}`}>
-                  ✓ At least one number (0-9)
-                </div>
-                <div className={`text-xs ${passwordValidation.special ? 'text-green-600' : 'text-red-600'}`}>
-                  ✓ At least one special character (!@#$%^&*(),.?":{}|&lt;&gt;)
+            
+            {success && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm text-green-800">{success}</p>
+                  </div>
                 </div>
               </div>
             )}
+            
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={loading}
+            >
+              {loading ? (
+                <div className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Creating account...
+                </div>
+              ) : (
+                'Create Account'
+              )}
+            </button>
+          </form>
+          
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600">
+              Already have an account?{' '}
+              <Link 
+                to="/login" 
+                className="font-medium text-blue-600 hover:text-blue-500 transition duration-200"
+              >
+                Sign in here
+              </Link>
+            </p>
           </div>
-          {error && <div className="text-red-500 text-sm">{error}</div>}
-          {success && <div className="text-green-500 text-sm">{success}</div>}
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
-            disabled={loading}
-          >
-            {loading ? 'Signing up...' : 'Sign Up'}
-          </button>
-        </form>
-        <div className="text-center text-sm text-gray-600">
-          Already have an account?{' '}
-          <Link to="/login" className="text-blue-600 hover:underline">Login</Link>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-xs text-gray-500">
+            By creating an account, you agree to our Terms of Service and Privacy Policy
+          </p>
         </div>
       </div>
     </div>

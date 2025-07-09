@@ -37,9 +37,21 @@ export interface Post {
   id: number;
   user_id: number;
   content: string;
+  media_url?: string;
   created_at: string;
-  likes: number;
-  comments: Comment[];
+  likes_count: number;
+  views_count: number;
+  comments_count: number;
+  visibility?: string;
+  category?: string;
+  tags?: string[];
+  user: {
+    id: number;
+    username: string;
+    first_name?: string;
+    last_name?: string;
+    image_url?: string;
+  };
 }
 
 export interface Comment {

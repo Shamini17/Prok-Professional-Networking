@@ -39,6 +39,7 @@ class User(db.Model):
     # Profile Image
     image_url = db.Column(db.String(255), default="")
     thumbnail_url = db.Column(db.String(255), default="")
+    banner_url = db.Column(db.String(255), nullable=True)
     
     # Profile Settings
     is_public = db.Column(db.Boolean, default=True)
@@ -176,17 +177,17 @@ class User(db.Model):
                 raise ValueError('Social links must be valid JSON format')
         return social_links
 
-    def to_dict(self):
+    def to_dict(self, include_sensitive=False):
         """Convert user object to dictionary for API responses"""
         return {
             'id': self.id,
             'username': self.username,
-            'email': self.email if self.show_email else None,
+            'email': self.email if include_sensitive or self.show_email else None,
             'first_name': self.first_name,
             'last_name': self.last_name,
             'bio': self.bio,
             'location': self.location,
-            'phone': self.phone if self.show_phone else None,
+            'phone': self.phone if include_sensitive or self.show_phone else None,
             'website': self.website,
             'company': self.company,
             'job_title': self.job_title,
@@ -198,6 +199,7 @@ class User(db.Model):
             'social_links': self.social_links,
             'image_url': self.image_url,
             'thumbnail_url': self.thumbnail_url,
+            'banner_url': self.banner_url,
             'is_public': self.is_public,
             'show_email': self.show_email,
             'show_phone': self.show_phone,
@@ -221,6 +223,7 @@ class User(db.Model):
             'skills': self.skills,
             'image_url': self.image_url,
             'thumbnail_url': self.thumbnail_url,
+            'banner_url': self.banner_url,
             'is_public': self.is_public,
             'created_at': self.created_at.isoformat() if self.created_at else None
         }
@@ -231,7 +234,8 @@ class User(db.Model):
             'first_name', 'last_name', 'bio', 'location', 'phone', 
             'website', 'company', 'job_title', 'industry', 
             'experience_years', 'skills', 'education', 'certifications', 
-            'social_links', 'is_public', 'show_email', 'show_phone'
+            'social_links', 'is_public', 'show_email', 'show_phone',
+            'banner_url'
         ]
         
         for field in allowed_fields:

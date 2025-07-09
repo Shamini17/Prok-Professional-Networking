@@ -7,10 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#4F46E5', // Indigo-600
-          hover: '#4338CA',   // Indigo-700
-        },
+        primary: '#2563eb', // blue-600
+        'primary-hover': '#1d4ed8', // blue-700
+        secondary: '#6366f1', // indigo-500
       },
     },
   },

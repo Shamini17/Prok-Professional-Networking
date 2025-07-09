@@ -7,6 +7,7 @@ import json
 from werkzeug.utils import secure_filename
 from PIL import Image
 import logging
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 profile_bp = Blueprint('profile', __name__)
 
@@ -168,6 +169,7 @@ def get_profile(user_id):
         profile_data['full_name'] = user.get_full_name()
         profile_data['profile_completion'] = user.get_profile_completion_percentage()
         profile_data['is_complete'] = user.is_profile_complete()
+        profile_data['banner_url'] = user.banner_url # Add banner_url to the response
         
         return jsonify(profile_data), 200
     
@@ -598,3 +600,30 @@ def get_profile_completion(user_id):
     except Exception as e:
         logger.error(f"Error getting profile completion: {str(e)}")
         return jsonify({'error': 'Internal server error'}), 500 
+
+@profile_bp.route('/api/profile/banner', methods=['POST'])
+@jwt_required()
+def upload_banner():
+    user_id = get_jwt_identity()
+    user = User.query.get(user_id)
+    if not user:
+        return jsonify({'error': 'User not found'}), 404
+    if 'banner' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+    file = request.files['banner']
+    if not file or not file.filename:
+        return jsonify({'error': 'No selected file'}), 400
+    allowed = {'png', 'jpg', 'jpeg', 'gif'}
+    filename = file.filename
+    if filename and '.' in filename and filename.rsplit('.', 1)[1].lower() in allowed:
+        ext = filename.rsplit('.', 1)[1].lower()
+        filename = secure_filename(f"banner_{user_id}_{int(time.time())}.{ext}")
+        banner_folder = os.path.join(current_app.root_path, 'uploads', 'banner_images')
+        os.makedirs(banner_folder, exist_ok=True)
+        file_path = os.path.join(banner_folder, filename)
+        file.save(file_path)
+        user.banner_url = f"/static/banner_images/{filename}"
+        db.session.commit()
+        return jsonify({'banner_url': user.banner_url}), 200
+    else:
+        return jsonify({'error': 'Invalid file type'}), 400 

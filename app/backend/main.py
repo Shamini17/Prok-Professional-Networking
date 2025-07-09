@@ -29,15 +29,14 @@ def create_app(config_name=None):
     # Initialize extensions
     db.init_app(app)
     
-    # Configure CORS
-    CORS(app, resources={
-        r"/api/*": {
-            "origins": app.config.get('CORS_ORIGINS', ["http://localhost:3000", "http://localhost:5173"]),
-            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-            "allow_headers": ["Content-Type", "Authorization"],
-            "supports_credentials": True
-        }
-    })
+    # Configure CORS - allow all localhost ports for development
+    CORS(app, 
+         origins=["http://localhost:3000"] + 
+                [f"http://localhost:{port}" for port in range(5173, 5180)] +
+                [f"http://127.0.0.1:{port}" for port in range(5173, 5180)],
+         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+         allow_headers=["Content-Type", "Authorization"],
+         supports_credentials=True)
     
     # Static file serving for uploaded images
     @app.route('/static/profile_images/<filename>')
