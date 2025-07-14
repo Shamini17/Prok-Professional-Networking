@@ -32,7 +32,6 @@ const ProfileEdit: React.FC = () => {
   const [imageUploading, setImageUploading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [skillsError, setSkillsError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -92,14 +91,7 @@ const ProfileEdit: React.FC = () => {
     e.preventDefault();
     setError(null);
     setSuccess(null);
-    setSkillsError(null);
     setSaving(true);
-    // Frontend validation for minimum 3 skills
-    if (formData.skills.length < 3) {
-      setSkillsError('Please enter at least 3 skills.');
-      setSaving(false);
-      return;
-    }
     
     try {
       // Update profile data
@@ -422,7 +414,6 @@ const ProfileEdit: React.FC = () => {
                   placeholder="JavaScript, React, Python, etc."
                 />
                 <p className="text-xs text-gray-500 mt-1">{formData.skills.length} skills added</p>
-                {skillsError && <p className="text-red-500 text-sm mt-1">{skillsError}</p>}
               </div>
             </div>
           </div>

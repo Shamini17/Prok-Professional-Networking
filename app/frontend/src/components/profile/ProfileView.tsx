@@ -29,13 +29,18 @@ const ProfileView: React.FC = () => {
   const handleBannerChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      console.log('Banner upload started:', file.name, file.size);
       setBannerUploading(true);
       setBannerError(null);
       try {
         const res = await profileApi.uploadBanner(file);
-        setBannerImage(res.banner_url);
+        console.log('Banner upload response:', res);
+        setBannerImage(`http://localhost:5000${res.banner_url}`);
         setSuccess('Banner uploaded successfully!');
+        // Refresh profile data to get updated banner URL
+        await fetchProfileData();
       } catch (err: any) {
+        console.error('Banner upload error:', err);
         setBannerError(err.message || 'Failed to upload banner');
       } finally {
         setBannerUploading(false);
@@ -164,10 +169,11 @@ const ProfileView: React.FC = () => {
       setSocialLinks(socialLinksData);
       setImageUrl(profileData.image_url || '');
       setSkills(skillsData.skills || []);
-      setBannerImage(profileData.banner_url || null);
+      setBannerImage(profileData.banner_url ? `http://localhost:5000${profileData.banner_url}` : null);
       // Debug: Log image URL
       console.log('Profile image URL:', profileData.image_url);
       console.log('Processed image URL:', getImageUrl(profileData.image_url || ''));
+      console.log('Banner URL from profile:', profileData.banner_url);
       // Initialize form data
       setFormData({
         first_name: profileData.first_name || '',
@@ -541,7 +547,7 @@ const ProfileView: React.FC = () => {
             {/* The options row is now in the banner image overlay */}
           </div>
         </div>
-        <label htmlFor="banner-upload" className="absolute top-4 right-4 bg-white bg-opacity-80 rounded-full p-2 shadow cursor-pointer hover:bg-opacity-100 transition-opacity flex items-center justify-center" title="Change Banner" style={{ width: 40, height: 40 }}>
+        <label htmlFor="banner-upload" className="absolute top-4 right-4 bg-white bg-opacity-80 rounded-full p-2 shadow cursor-pointer hover:bg-opacity-100 transition-opacity flex items-center justify-center" title="Change Banner" style={{ width: 40, height: 40 }} onClick={() => console.log('Banner upload label clicked')}>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" className="text-blue-600">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
           </svg>
@@ -551,6 +557,7 @@ const ProfileView: React.FC = () => {
             accept="image/png, image/jpeg, image/jpg, image/gif"
             className="hidden"
             onChange={handleBannerChange}
+            onClick={() => console.log('Banner upload input clicked')}
           />
         </label>
         {bannerImage && (
@@ -568,6 +575,14 @@ const ProfileView: React.FC = () => {
         {bannerError && (
           <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white text-xs rounded px-2 py-1 shadow">{bannerError}</div>
         )}
+        {/* Test banner upload button */}
+        <button
+          type="button"
+          onClick={() => document.getElementById('banner-upload')?.click()}
+          className="absolute bottom-4 right-4 bg-green-500 text-white rounded-full px-3 py-1 text-xs shadow hover:bg-green-600 transition"
+        >
+          Test Banner Upload
+        </button>
       </div>
       {/* Glassmorphism Card */}
       <div className="max-w-4xl mx-auto mt-[-60px] mb-8 rounded-3xl shadow-2xl bg-white bg-opacity-80 backdrop-blur-lg border border-gray-200 p-8 flex flex-col md:flex-row items-center md:items-start gap-8 relative z-20 animate-fadein">

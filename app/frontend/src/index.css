@@ -7,6 +7,10 @@
   body {
     @apply text-gray-900 bg-white dark:bg-gray-900 dark:text-white;
   }
+  
+  input, textarea, select {
+    @apply text-gray-900 bg-white;
+  }
 }
 
 @layer components {
@@ -20,7 +24,7 @@
     @apply text-white bg-secondary hover:bg-secondary/90;
   }
   .input {
-    @apply px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 bg-white;
   }
   .profile-fadein {
     animation: profileFadeIn 0.7s ease;
