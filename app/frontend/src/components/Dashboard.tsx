@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
               <h1 className="text-2xl font-bold text-gray-900">Prok Professional Network</h1>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-gray-700">Welcome, {user?.name || 'User'}!</span>
+              <span className="text-gray-700">Welcome, {user?.username || 'User'}!</span>
               <button
                 onClick={logout}
                 className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
