@@ -602,28 +602,83 @@ def get_profile_completion(user_id):
         return jsonify({'error': 'Internal server error'}), 500 
 
 @profile_bp.route('/api/profile/banner', methods=['POST'])
-@jwt_required()
-def upload_banner():
-    user_id = get_jwt_identity()
-    user = User.query.get(user_id)
-    if not user:
-        return jsonify({'error': 'User not found'}), 404
-    if 'banner' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
-    file = request.files['banner']
-    if not file or not file.filename:
-        return jsonify({'error': 'No selected file'}), 400
-    allowed = {'png', 'jpg', 'jpeg', 'gif'}
-    filename = file.filename
-    if filename and '.' in filename and filename.rsplit('.', 1)[1].lower() in allowed:
-        ext = filename.rsplit('.', 1)[1].lower()
-        filename = secure_filename(f"banner_{user_id}_{int(time.time())}.{ext}")
+@token_required
+def upload_banner(user_id):
+    """Upload banner image with validation and processing"""
+    try:
+        user = User.query.get(int(user_id))
+        
+        if not user:
+            return jsonify({'error': 'User not found'}), 404
+        
+        # Check if file is present
+        if 'banner' not in request.files:
+            return jsonify({'error': 'No file part'}), 400
+        
+        file = request.files['banner']
+        if not file or not file.filename:
+            return jsonify({'error': 'No selected file'}), 400
+        
+        # Validate file extension
+        if not allowed_file(file.filename):
+            return jsonify({'error': 'Invalid file type. Only PNG, JPG, JPEG, GIF allowed'}), 400
+        
+        # Validate file content
+        is_valid, error_msg = validate_file_content(file)
+        if not is_valid:
+            return jsonify({'error': error_msg}), 400
+        
+        # Check file size
+        file.seek(0, 2)  # Seek to end
+        file_size = file.tell()
+        file.seek(0)  # Reset to beginning
+        
+        max_size = current_app.config['MAX_CONTENT_LENGTH']
+        if file_size > max_size:
+            return jsonify({'error': f'File too large. Maximum size is {max_size // (1024*1024)}MB'}), 400
+        
+        # Generate secure filename
+        ext = file.filename.rsplit('.', 1)[1].lower()
+        timestamp = int(time.time())
+        new_filename = f"banner_{user_id}_{timestamp}.{ext}"
+        
+        # Ensure banner upload directory exists
         banner_folder = os.path.join(current_app.root_path, 'uploads', 'banner_images')
         os.makedirs(banner_folder, exist_ok=True)
-        file_path = os.path.join(banner_folder, filename)
-        file.save(file_path)
-        user.banner_url = f"/static/banner_images/{filename}"
+        
+        # Save file
+        filepath = os.path.join(banner_folder, new_filename)
+        file.save(filepath)
+        
+        # Process image (optional - for banner images we might want to keep original size)
+        try:
+            with Image.open(filepath) as img:
+                # Convert to RGB if necessary
+                if img.mode in ('RGBA', 'LA', 'P'):
+                    img = img.convert('RGB')
+                
+                # For banner images, we might want to resize to a reasonable width
+                # but maintain aspect ratio
+                max_width = 1200  # Reasonable banner width
+                if img.size[0] > max_width:
+                    ratio = max_width / img.size[0]
+                    new_height = int(img.size[1] * ratio)
+                    img = img.resize((max_width, new_height), Image.Resampling.LANCZOS)
+                
+                # Save with compression
+                img.save(filepath, 'JPEG', quality=85, optimize=True)
+        except Exception as e:
+            logger.warning(f"Banner image processing failed for {new_filename}: {str(e)}")
+            # Continue with original file if processing fails
+        
+        # Update user profile with banner URL
+        user.banner_url = f"/static/banner_images/{new_filename}"
         db.session.commit()
+        
+        logger.info(f"Banner image uploaded for user {user_id}: {new_filename}")
         return jsonify({'banner_url': user.banner_url}), 200
-    else:
-        return jsonify({'error': 'Invalid file type'}), 400 
+    
+    except Exception as e:
+        db.session.rollback()
+        logger.error(f"Error uploading banner image: {str(e)}")
+        return jsonify({'error': 'Internal server error'}), 500 

@@ -29,14 +29,15 @@ def create_app(config_name=None):
     # Initialize extensions
     db.init_app(app)
     
-    # Configure CORS - allow all localhost ports for development
-    CORS(app, 
-         origins=["http://localhost:3000"] + 
-                [f"http://localhost:{port}" for port in range(5173, 5180)] +
-                [f"http://127.0.0.1:{port}" for port in range(5173, 5180)],
-         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-         allow_headers=["Content-Type", "Authorization"],
-         supports_credentials=True)
+    # Configure CORS - allow production origins
+    ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173,https://your-frontend-url.onrender.com').split(',')
+    
+    CORS(app,
+         origins=ALLOWED_ORIGINS,
+         methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+         allow_headers=['Content-Type', 'Authorization', 'X-Requested-With'],
+         supports_credentials=True,
+         max_age=3600)
     
     # Static file serving for uploaded images
     @app.route('/static/profile_images/<filename>')
@@ -53,6 +54,23 @@ def create_app(config_name=None):
             return response
         except FileNotFoundError:
             return jsonify({'error': 'Image not found'}), 404
+
+    # Static file serving for banner images
+    @app.route('/static/banner_images/<filename>')
+    def serve_banner_image(filename):
+        """Serve uploaded banner images"""
+        try:
+            banner_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'banner_images')
+            response = send_from_directory(banner_folder, filename)
+            
+            # Add CORS headers for image serving
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            
+            return response
+        except FileNotFoundError:
+            return jsonify({'error': 'Banner image not found'}), 404
 
     # Add static file serving for post media
     @app.route('/static/posts/<filename>')
@@ -140,21 +158,23 @@ def create_app(config_name=None):
 if __name__ == '__main__':
     # Set environment variables
     os.environ['FLASK_APP'] = 'main.py'
-    os.environ['FLASK_ENV'] = 'development'
     
     # Create and run app
     app = create_app()
     
     # Log startup information
     app.logger.info("Starting Prok Professional Networking API...")
-    app.logger.info(f"Environment: {os.environ.get('FLASK_ENV', 'development')}")
+    app.logger.info(f"Environment: {os.environ.get('FLASK_CONFIG', 'development')}")
     app.logger.info(f"Database: {app.config['SQLALCHEMY_DATABASE_URI']}")
     app.logger.info(f"Upload folder: {app.config['UPLOAD_FOLDER']}")
+    
+    # Get port from environment (for cloud platforms)
+    port = int(os.environ.get('PORT', 5000))
     
     # Run the application
     app.run(
         host='0.0.0.0',
-        port=5000,
+        port=port,
         debug=app.config.get('DEBUG', False)
     )
 
