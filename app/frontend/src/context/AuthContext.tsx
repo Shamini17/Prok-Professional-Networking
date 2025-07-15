@@ -72,12 +72,17 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (usernameOrEmail: string, password: string): Promise<boolean> => {
     try {
       const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const isEmail = usernameOrEmail.includes('@');
       const response = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: usernameOrEmail, email: usernameOrEmail, password }),
+        body: JSON.stringify(
+          isEmail
+            ? { email: usernameOrEmail, password }
+            : { username: usernameOrEmail, password }
+        ),
       });
 
       const data = await response.json();
