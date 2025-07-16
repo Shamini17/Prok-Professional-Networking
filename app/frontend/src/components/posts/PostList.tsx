@@ -9,6 +9,8 @@ import Skeleton from '../ui/Skeleton';
 
 // IMPORTANT: In production, set VITE_API_URL in your environment to your backend's deployed URL (e.g., https://your-backend-url.onrender.com)
 
+const BACKEND_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const PostList: React.FC = () => {
   // State management
   const [posts, setPosts] = useState<Post[]>([]);
@@ -192,17 +194,11 @@ const PostList: React.FC = () => {
       {/* Post Header */}
       <div className="flex items-center mb-4">
         <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-          {post.user.image_url ? (
-            <LazyImage
-              src={post.user.image_url}
-              alt={`${post.user.username}'s profile`}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600 font-semibold">
-              {post.user.username.charAt(0).toUpperCase()}
-            </div>
-          )}
+          <LazyImage
+            src={post.user.image_url ? (post.user.image_url.startsWith('http') ? post.user.image_url : `${BACKEND_BASE_URL}${post.user.image_url}`) : ''}
+            alt={`${post.user.username}'s profile`}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="flex-1">
           <div className="font-semibold text-gray-900">
@@ -240,13 +236,13 @@ const PostList: React.FC = () => {
         <div className="mb-4">
           {post.media_url.match(/\.(jpg|jpeg|png|gif|webp)$/i) ? (
             <LazyImage
-              src={post.media_url}
+              src={post.media_url.startsWith('http') ? post.media_url : `${BACKEND_BASE_URL}${post.media_url}`}
               alt="Post media"
               className="w-full max-h-96 object-cover rounded-lg"
             />
           ) : (
             <video 
-              src={post.media_url} 
+              src={post.media_url.startsWith('http') ? post.media_url : `${BACKEND_BASE_URL}${post.media_url}`}
               controls 
               className="w-full max-h-96 rounded-lg"
             />
