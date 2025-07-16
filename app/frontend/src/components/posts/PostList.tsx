@@ -7,6 +7,8 @@ import LazyImage from '../ui/LazyImage';
 import LoadingSpinner from '../ui/LoadingSpinner';
 import Skeleton from '../ui/Skeleton';
 
+// IMPORTANT: In production, set VITE_API_URL in your environment to your backend's deployed URL (e.g., https://your-backend-url.onrender.com)
+
 const PostList: React.FC = () => {
   // State management
   const [posts, setPosts] = useState<Post[]>([]);
@@ -16,6 +18,8 @@ const PostList: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [categories, setCategories] = useState<Category[]>([]);
   const [popularTags, setPopularTags] = useState<PopularTag[]>([]);
+  const [categoriesLoading, setCategoriesLoading] = useState(false);
+  const [categoriesError, setCategoriesError] = useState<string | null>(null);
   
   // Filter states
   const [searchTerm, setSearchTerm] = useState('');
@@ -46,11 +50,16 @@ const PostList: React.FC = () => {
   }, [debouncedSearch, selectedCategory, selectedVisibility, selectedTags, sortBy, sortOrder]);
 
   const loadCategories = async () => {
+    setCategoriesLoading(true);
+    setCategoriesError(null);
     try {
       const response = await postsApi.getCategories();
       setCategories(response.categories);
     } catch (err) {
-      console.error('Failed to load categories:', err);
+      setCategoriesError('Failed to load categories. Please try again later.');
+      setCategories([]);
+    } finally {
+      setCategoriesLoading(false);
     }
   };
 
@@ -328,9 +337,12 @@ const PostList: React.FC = () => {
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
             className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            disabled={categoriesLoading || !!categoriesError}
           >
-            <option value="">All Categories</option>
-            {categories.map(category => (
+            {categoriesLoading && <option>Loading...</option>}
+            {categoriesError && <option>{categoriesError}</option>}
+            {!categoriesLoading && !categoriesError && <option value="">All Categories</option>}
+            {!categoriesLoading && !categoriesError && categories.map(category => (
               <option key={category.id} value={category.name}>
                 {category.name} ({category.count})
               </option>
