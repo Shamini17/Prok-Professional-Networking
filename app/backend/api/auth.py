@@ -3,6 +3,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from models.user import User, db
 from utils.jwt_utils import create_token, token_required
 import re
+from flask_cors import CORS
+from flask import Flask
 
 auth_bp = Blueprint('auth', __name__)
 
