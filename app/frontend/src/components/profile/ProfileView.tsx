@@ -5,6 +5,8 @@ import type { ProfileData, EducationData, CertificationData, SocialLinksData } f
 import ReactModal from 'react-modal';
 ReactModal.setAppElement('#root');
 
+const BACKEND_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 // Add a cover/banner image URL (could be dynamic in the future)
 const COVER_IMAGE = '/default-profile.png'; // Use your own banner or a default
 
@@ -167,9 +169,8 @@ const ProfileView: React.FC = () => {
       setEducation(educationData);
       setCertifications(certificationsData);
       setSocialLinks(socialLinksData);
-      setImageUrl(profileData.image_url || '');
-      setSkills(skillsData.skills || []);
-      setBannerImage(profileData.banner_url ? `http://localhost:5000${profileData.banner_url}` : null);
+      setBannerImage(profileData.banner_url ? `${BACKEND_BASE_URL}${profileData.banner_url}` : null);
+      setImageUrl(profileData.image_url ? `${BACKEND_BASE_URL}${profileData.image_url}` : '');
       // Debug: Log image URL
       console.log('Profile image URL:', profileData.image_url);
       console.log('Processed image URL:', getImageUrl(profileData.image_url || ''));
@@ -378,18 +379,14 @@ const ProfileView: React.FC = () => {
 
   // Helper function to construct full image URL
   const getImageUrl = (imagePath: string, cacheBust = false) => {
-    if (!imagePath) {
-      return '';
-    }
-    if (imagePath.startsWith('http')) {
-      return imagePath;
-    }
-    // Only add cache busting if requested (after upload)
+    if (!imagePath) return '';
+    if (imagePath.startsWith('http')) return imagePath;
+    let url = `${BACKEND_BASE_URL}${imagePath}`;
     if (cacheBust) {
-      const separator = imagePath.includes('?') ? '&' : '?';
-      return `${imagePath}${separator}t=${Date.now()}`;
+      const separator = url.includes('?') ? '&' : '?';
+      url = `${url}${separator}t=${Date.now()}`;
     }
-    return imagePath;
+    return url;
   };
 
   if (loading) {

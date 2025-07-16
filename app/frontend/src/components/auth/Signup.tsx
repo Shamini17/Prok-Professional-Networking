@@ -67,7 +67,7 @@ const Signup: React.FC = () => {
           setSuccess("Account created and logged in! Redirecting to profile...");
           setError(null);
           setTimeout(() => {
-            navigate('/profile');
+            navigate('/login');
           }, 1500);
         } else {
           setSuccess("Account created! Please log in.");
