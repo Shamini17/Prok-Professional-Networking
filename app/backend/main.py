@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory, make_response
+from flask import Flask, jsonify, send_from_directory, make_response, request
 from flask_cors import CORS
 from config import config
 import os
@@ -40,42 +40,51 @@ def create_app(config_name=None):
          max_age=3600)
     
     # Static file serving for uploaded images
-    @app.route('/static/profile_images/<filename>')
+    @app.route('/static/profile_images/<filename>', methods=['GET', 'OPTIONS'])
     def serve_profile_image(filename):
-        """Serve uploaded profile images"""
-        try:
-            response = make_response(send_from_directory(app.config['UPLOAD_FOLDER'], filename))
-            
-            # Add CORS headers for image serving
+        if request.method == 'OPTIONS':
+            response = make_response()
             response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
             response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-            
+            return response
+        try:
+            response = make_response(send_from_directory(app.config['UPLOAD_FOLDER'], filename))
+            response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
             return response
         except FileNotFoundError:
             return jsonify({'error': 'Image not found'}), 404
 
     # Static file serving for banner images
-    @app.route('/static/banner_images/<filename>')
+    @app.route('/static/banner_images/<filename>', methods=['GET', 'OPTIONS'])
     def serve_banner_image(filename):
-        """Serve uploaded banner images"""
-        try:
-            banner_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'banner_images')
-            response = make_response(send_from_directory(banner_folder, filename))
-            
-            # Add CORS headers for image serving
+        if request.method == 'OPTIONS':
+            response = make_response()
             response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
             response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-            
+            return response
+        try:
+            banner_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'banner_images')
+            response = make_response(send_from_directory(banner_folder, filename))
+            response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
             return response
         except FileNotFoundError:
             return jsonify({'error': 'Banner image not found'}), 404
 
     # Add static file serving for post media
-    @app.route('/static/posts/<filename>')
+    @app.route('/static/posts/<filename>', methods=['GET', 'OPTIONS'])
     def serve_post_media(filename):
-        """Serve uploaded post media files (images/videos)"""
+        if request.method == 'OPTIONS':
+            response = make_response()
+            response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            return response
         post_upload_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'posts')
         try:
             response = make_response(send_from_directory(post_upload_folder, filename))
