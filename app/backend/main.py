@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, make_response
 from flask_cors import CORS
 from config import config
 import os
@@ -44,10 +44,10 @@ def create_app(config_name=None):
     def serve_profile_image(filename):
         """Serve uploaded profile images"""
         try:
-            response = send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+            response = make_response(send_from_directory(app.config['UPLOAD_FOLDER'], filename))
             
             # Add CORS headers for image serving
-            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
             response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
             
@@ -61,10 +61,10 @@ def create_app(config_name=None):
         """Serve uploaded banner images"""
         try:
             banner_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'banner_images')
-            response = send_from_directory(banner_folder, filename)
+            response = make_response(send_from_directory(banner_folder, filename))
             
             # Add CORS headers for image serving
-            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
             response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
             
@@ -78,8 +78,8 @@ def create_app(config_name=None):
         """Serve uploaded post media files (images/videos)"""
         post_upload_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads', 'posts')
         try:
-            response = send_from_directory(post_upload_folder, filename)
-            response.headers['Access-Control-Allow-Origin'] = '*'
+            response = make_response(send_from_directory(post_upload_folder, filename))
+            response.headers['Access-Control-Allow-Origin'] = 'https://prok-frontend-ul8k.onrender.com'
             response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
             return response
