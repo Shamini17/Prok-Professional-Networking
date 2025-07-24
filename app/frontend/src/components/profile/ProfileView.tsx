@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { profileApi } from './api';
 import type { ProfileData, EducationData, CertificationData, SocialLinksData } from './api';
 import ReactModal from 'react-modal';
+import { useAuth } from '../../context/AuthContext';
 ReactModal.setAppElement('#root');
 
 const BACKEND_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
@@ -21,6 +22,7 @@ const ProfileView: React.FC = () => {
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { logout } = useAuth();
 
   // Add at the top of the component
   const [bannerImage, setBannerImage] = useState<string | null>(null);
@@ -373,8 +375,12 @@ const ProfileView: React.FC = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/login');
+    try {
+      logout();
+      navigate('/login');
+    } catch (err) {
+      navigate('/login');
+    }
   };
 
   // Helper function to construct full image URL
@@ -1010,6 +1016,15 @@ const ProfileView: React.FC = () => {
           </div>
         </ReactModal>
       )}
+      {/* Add a logout button above the profile image */}
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-30">
+        <button
+          onClick={handleLogout}
+          className="bg-gradient-to-r from-purple-500 to-indigo-500 px-4 py-2 rounded-full text-white font-semibold shadow hover:from-purple-600 hover:to-indigo-600 transition"
+        >
+          Logout
+        </button>
+      </div>
     </div>
   );
 };
